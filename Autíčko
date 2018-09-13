@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i = 1;
+            int j = 40;
+            while (i < j)  // pokud je i větší než j ukončí program
+            {
+                Console.Clear(); // vyčištění obrázovky
+                Console.SetCursorPosition(i, 10);  // nastavení kurzoru
+                Console.Write("M"); //na pozici výše zapiš M
+                Console.SetCursorPosition(i, 11); // nastavení kurzoru
+                Console.Write("MMMM"); //na pozici výše zapiš MMMMM
+                Console.SetCursorPosition(i, 12); // nastavení kurzoru
+                Console.Write("o  o"); //na pozici výše zapiš O  O
+                System.Threading.Thread.Sleep(200); // Snížení rychlosti běhu psaní [nepoužívat u složitých aplikací]
+                i++;  // přičti jedna 1 k i tzn. že obnoví cyklus a pokračuje až do konce aq posune pozici i u všech o jedno
+            }
+            //ukončení cyklu po nastaveném j
+
+            Console.SetCursorPosition(20, 12); //pozice textu
+            Console.Write("Konec programu   "); //text
+            Console.ReadKey(); //čeká na stisk klávesnice
+
+        }
+    }
+}
